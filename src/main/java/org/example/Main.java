@@ -1,14 +1,5 @@
 package org.example;
 
-//Step 1: Create an array with numbers from 1 to 10 and print it to the console.
-//
-//
-//
-//
-//
-//
-//
-//
 public class Main {
     public static void main(String[] args) {
 
