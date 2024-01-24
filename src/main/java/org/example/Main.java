@@ -39,12 +39,22 @@ public class Main {
         //Step 5: Perform element-wise addition of both arrays and store the result in a third array. Print the result array to the console.
 
         int[] numbers2 = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-        int[] resultArray = new int[10];
+        int[] resultArray = sumArrays(numbers1,numbers2);
         System.out.print("Result Array: ");
-        for (int i = 0; i < resultArray.length; i++) {
-            resultArray[i] = numbers1[i] + numbers2[i];
-            System.out.print(resultArray[i] + " ");
+        for (int number : resultArray) {
+            System.out.print(number + " ");
         }
         System.out.println();
+    }
+
+    public static int[] sumArrays(int[] array1, int[] array2){
+
+        int[] sum = new int[array1.length];
+
+        for(int i = 0; i < sum.length; i++){
+            sum[i] = array1[i]+array2[i];
+        }
+
+        return sum;
     }
 }
