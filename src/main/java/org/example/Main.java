@@ -1,7 +1,22 @@
 package org.example;
 
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
+
+        //Implement a program that reads a text from the console and then outputs the letters individually. Tip: Learn about the Scanner class.
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter a string:");
+        String userString = scanner.nextLine();
+        System.out.println("You entered: " + userString);
+        for (int i = 0; i < userString.length(); i++) {
+            System.out.println(userString.charAt(i));
+        }
+        scanner.close();
+
 
         int[] numbers1 = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 
@@ -18,7 +33,6 @@ public class Main {
         System.out.println("Largest number in the array: " + largest);
 
 
-
         //Step 2: Calculate the sum of all numbers in the array and print the result to the console.
         int sum = 0;
         for (int number : numbers1) {
@@ -30,7 +44,7 @@ public class Main {
         //Step 5: Perform element-wise addition of both arrays and store the result in a third array. Print the result array to the console.
 
         int[] numbers2 = {11, 12, 13, 14, 15, 16, 17, 18, 19, 20};
-        int[] resultArray = sumArrays(numbers1,numbers2);
+        int[] resultArray = sumArrays(numbers1, numbers2);
         System.out.print("Result Array: ");
         for (int number : resultArray) {
             System.out.print(number + " ");
@@ -38,12 +52,12 @@ public class Main {
         System.out.println();
     }
 
-    public static int[] sumArrays(int[] array1, int[] array2){
+    public static int[] sumArrays(int[] array1, int[] array2) {
 
         int[] sum = new int[array1.length];
 
-        for(int i = 0; i < sum.length; i++){
-            sum[i] = array1[i]+array2[i];
+        for (int i = 0; i < sum.length; i++) {
+            sum[i] = array1[i] + array2[i];
         }
 
         return sum;
